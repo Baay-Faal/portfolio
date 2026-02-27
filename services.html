@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <title>Services — Idrissa Sarr | EDEE Studio</title>
+    <meta name="description" content="Services de photographie et vidéographie professionnelle par Idrissa Sarr. Fashion, clips, événementiel, sport, shooting marque.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="loader" id="loader"><div class="loader-logo"><span>E</span><span>D</span><span>E</span><span>E</span></div><div class="loader-bar"><div class="loader-bar-fill"></div></div><div class="loader-percent" id="loaderPercent">0%</div></div>
+    <div class="cursor" id="cursor"></div>
+
+    <nav class="nav" id="nav">
+        <a href="index.html" class="nav-logo">EDEE<span class="dot">.</span></a>
+        <ul class="nav-links">
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">Accueil</a><a href="about.html">À propos</a><a href="portfolio.html">Portfolio</a><a href="services.html">Services</a><a href="gallery.html">Galerie</a><a href="contact.html">Contact</a></div>
+
+    <header class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="page-header-pattern"></div>
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="container">
+            <div class="page-header-label"><span class="line"></span> Services</div>
+            <h1>CE QUE JE<br><span class="accent">PROPOSE</span></h1>
+            <p>Des prestations sur-mesure pour donner vie à votre vision. Chaque projet est unique, chaque collaboration est une aventure créative.</p>
+        </div>
+    </header>
+
+    <!-- SERVICES LIST -->
+    <section style="background:var(--black);">
+        <div class="container">
+            <div class="services-list">
+                <div class="service-row reveal">
+                    <span class="service-num">01</span>
+                    <div class="service-info">
+                        <h3>Photographie Mode</h3>
+                        <p>Éditoriaux mode, lookbooks, campagnes de marque. Mise en valeur de vêtements et de mannequins avec un regard artistique unique. Collaboration avec stylistes et directeurs artistiques.</p>
+                    </div>
+                    <span class="service-arrow">↗</span>
+                </div>
+                <div class="service-row reveal reveal-delay-1">
+                    <span class="service-num">02</span>
+                    <div class="service-info">
+                        <h3>Vidéographie Cinématique</h3>
+                        <p>Réalisation de vidéos cinématiques, teasers, films d'entreprise. Du concept au montage final en qualité 4K. Color grading professionnel et sound design.</p>
+                    </div>
+                    <span class="service-arrow">↗</span>
+                </div>
+                <div class="service-row reveal reveal-delay-2">
+                    <span class="service-num">03</span>
+                    <div class="service-info">
+                        <h3>Shooting Marque & Produit</h3>
+                        <p>Photographie produit, packshots, contenu visuel pour réseaux sociaux et campagnes publicitaires. Adaptation aux guidelines de votre marque.</p>
+                    </div>
+                    <span class="service-arrow">↗</span>
+                </div>
+                <div class="service-row reveal reveal-delay-3">
+                    <span class="service-num">04</span>
+                    <div class="service-info">
+                        <h3>Couverture Événementielle</h3>
+                        <p>Mariages, galas, conférences, festivals. Capturer chaque moment clé avec élégance et discrétion. Livraison rapide et galerie privée en ligne.</p>
+                    </div>
+                    <span class="service-arrow">↗</span>
+                </div>
+                <div class="service-row reveal">
+                    <span class="service-num">05</span>
+                    <div class="service-info">
+                        <h3>Production de Clips Musicaux</h3>
+                        <p>Clips musicaux professionnels. Direction artistique, tournage multi-caméras, effets visuels, post-production complète. Du concept au produit final.</p>
+                    </div>
+                    <span class="service-arrow">↗</span>
+                </div>
+                <div class="service-row reveal reveal-delay-1">
+                    <span class="service-num">06</span>
+                    <div class="service-info">
+                        <h3>Photographie Sportive</h3>
+                        <p>Couverture de compétitions, portraits d'athlètes, contenu pour fédérations et clubs sportifs. Photographie d'action rapide haute résolution.</p>
+                    </div>
+                    <span class="service-arrow">↗</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section style="background:var(--gray-900);">
+        <div class="container">
+            <div class="section-label reveal"><span class="line"></span> Processus</div>
+            <h2 class="section-title reveal reveal-delay-1">COMMENT JE<br><span class="accent">TRAVAILLE</span></h2>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3rem;">
+                <div class="reveal" style="text-align:center;">
+                    <div style="width:64px;height:64px;border-radius:50%;background:var(--gray-800);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:1.5rem;color:var(--accent);font-weight:900;">1</div>
+                    <h4 style="font-weight:800;margin-bottom:0.5rem;">Briefing</h4>
+                    <p style="font-size:0.85rem;color:var(--gray-400);line-height:1.6;">Échange approfondi sur votre vision, vos objectifs et vos attentes.</p>
+                </div>
+                <div class="reveal reveal-delay-1" style="text-align:center;">
+                    <div style="width:64px;height:64px;border-radius:50%;background:var(--gray-800);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:1.5rem;color:var(--accent);font-weight:900;">2</div>
+                    <h4 style="font-weight:800;margin-bottom:0.5rem;">Conception</h4>
+                    <p style="font-size:0.85rem;color:var(--gray-400);line-height:1.6;">Direction artistique, moodboard, planification technique.</p>
+                </div>
+                <div class="reveal reveal-delay-2" style="text-align:center;">
+                    <div style="width:64px;height:64px;border-radius:50%;background:var(--gray-800);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:1.5rem;color:var(--accent);font-weight:900;">3</div>
+                    <h4 style="font-weight:800;margin-bottom:0.5rem;">Production</h4>
+                    <p style="font-size:0.85rem;color:var(--gray-400);line-height:1.6;">Shooting ou tournage professionnel avec équipement premium.</p>
+                </div>
+                <div class="reveal reveal-delay-3" style="text-align:center;">
+                    <div style="width:64px;height:64px;border-radius:50%;background:var(--gray-800);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:1.5rem;color:var(--accent);font-weight:900;">4</div>
+                    <h4 style="font-weight:800;margin-bottom:0.5rem;">Livraison</h4>
+                    <p style="font-size:0.85rem;color:var(--gray-400);line-height:1.6;">Post-production experte et livraison dans les délais convenus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="big-cta" style="background:var(--black);">
+        <div class="big-cta-orb"></div>
+        <div class="container">
+            <h2 class="reveal">UN PROJET<br><span class="outline">EN TÊTE ?</span></h2>
+            <p class="reveal reveal-delay-1">Discutons de vos besoins et créons ensemble quelque chose d'extraordinaire.</p>
+            <div class="reveal reveal-delay-2">
+                <a href="contact.html" class="btn-primary">Demander un devis <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><h3>EDEE<span class="dot">.</span></h3><p>Studio photo & vidéo premium.</p></div>
+                <div class="footer-col"><h4>Navigation</h4><a href="index.html">Accueil</a><a href="about.html">À propos</a><a href="portfolio.html">Portfolio</a><a href="services.html">Services</a><a href="contact.html">Contact</a></div>
+                <div class="footer-col"><h4>Services</h4><a href="#">Photo Mode</a><a href="#">Vidéographie</a><a href="#">Clips</a><a href="#">Événementiel</a></div>
+                <div class="footer-col"><h4>Réseaux</h4><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a><a href="#" target="_blank" rel="noopener noreferrer">YouTube</a><a href="#" target="_blank" rel="noopener noreferrer">TikTok</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 EDEE Studio</p><div class="footer-bottom-links"><a href="#">Mentions légales</a><a href="#">Confidentialité</a></div></div>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox"><button class="lightbox-close" aria-label="Fermer">✕</button><img src="" alt="" id="lightboxImg"></div>
+    <button class="back-to-top" id="backToTop" aria-label="Haut">↑</button>
+    <script src="js/security.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

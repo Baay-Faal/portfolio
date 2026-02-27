@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <title>Portfolio — Idrissa Sarr | EDEE Studio</title>
+    <meta name="description" content="Découvrez les projets photo et vidéo d'Idrissa Sarr. Fashion, sport, nature, clips musicaux, événementiel.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="loader" id="loader">
+        <div class="loader-logo"><span>E</span><span>D</span><span>E</span><span>E</span></div>
+        <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+        <div class="loader-percent" id="loaderPercent">0%</div>
+    </div>
+    <div class="cursor" id="cursor"></div>
+
+    <nav class="nav" id="nav">
+        <a href="index.html" class="nav-logo">EDEE<span class="dot">.</span></a>
+        <ul class="nav-links">
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="page-header-pattern"></div>
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="container">
+            <div class="page-header-label"><span class="line"></span> Portfolio</div>
+            <h1>PROJETS<br><span class="accent">SÉLECTIONNÉS</span></h1>
+            <p>Une sélection de mes meilleurs travaux en photographie et vidéographie à travers différentes disciplines.</p>
+        </div>
+    </header>
+
+    <!-- PORTFOLIO GRID -->
+    <section style="background:var(--gray-900);">
+        <div class="container">
+            <div class="portfolio-filters reveal">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="fashion">Fashion</button>
+                <button class="filter-btn" data-filter="sport">Sport</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="clip">Clips</button>
+                <button class="filter-btn" data-filter="event">Événementiel</button>
+                <button class="filter-btn" data-filter="studio">Studio</button>
+            </div>
+
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- 1 -->
+                <div class="portfolio-item large reveal" data-category="fashion" data-lightbox="">
+                    <img src="assets/images/elegance.jpeg" alt="Description" loading="lazy" draggable="false">
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-cat">Fashion / Mannequinat</span>
+                        <h3 class="portfolio-item-name">Élégance Africaine — Éditorial Mode</h3>
+                    </div>
+                    <div class="portfolio-item-arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="portfolio-item reveal reveal-delay-1" data-category="sport" data-lightbox="">
+                    <div class="img-placeholder" style="width:100%;height:100%;">SPORT<br>ACTION</div>
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-cat">Photographie Sportive</span>
+                        <h3 class="portfolio-item-name">L'Intensité du Jeu</h3>
+                    </div>
+                    <div class="portfolio-item-arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="portfolio-item reveal reveal-delay-2" data-category="nature" data-lightbox="">
+                    <div class="img-placeholder" style="width:100%;height:100%;">NATURE<br>LANDSCAPE</div>
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-cat">Photographie Nature</span>
+                        <h3 class="portfolio-item-name">Coucher de Soleil sur le Sahel</h3>
+                    </div>
+                    <div class="portfolio-item-arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="portfolio-item reveal" data-category="clip" data-lightbox="">
+                    <div class="img-placeholder" style="width:100%;height:100%;">CLIP<br>MUSICAL</div>
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-cat">Clips Musicaux</span>
+                        <h3 class="portfolio-item-name">Vibrations Urbaines</h3>
+                    </div>
+                    <div class="portfolio-item-arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="portfolio-item reveal reveal-delay-1" data-category="event" data-lightbox="">
+                    <div class="img-placeholder" style="width:100%;height:100%;">ÉVÉNEMENT<br>CORPORATE</div>
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-cat">Événementiel</span>
+                        <h3 class="portfolio-item-name">Gala de Charité 2024</h3>
+                    </div>
+                    <div class="portfolio-item-arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="portfolio-item reveal reveal-delay-2" data-category="studio" data-lightbox="">
+                    <img src="assets/images/studio.jpeg" alt="Description" loading="lazy" draggable="false">
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-cat">Shooting Studio</span>
+                        <h3 class="portfolio-item-name">Portraits d'Artistes</h3>
+                    </div>
+                    <div class="portfolio-item-arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="portfolio-item reveal" data-category="fashion" data-lightbox="">
+                    <div class="img-placeholder" style="width:100%;height:100%;">FASHION<br>STREET</div>
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-cat">Fashion</span>
+                        <h3 class="portfolio-item-name">Style de Rue — Dakar</h3>
+                    </div>
+                    <div class="portfolio-item-arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="portfolio-item reveal reveal-delay-1" data-category="sport" data-lightbox="">
+                    <div class="img-placeholder" style="width:100%;height:100%;">SPORT<br>PORTRAIT</div>
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-cat">Sport</span>
+                        <h3 class="portfolio-item-name">Champions — Série Portraits</h3>
+                    </div>
+                    <div class="portfolio-item-arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </div>
+                </div>
+                <!-- 9 -->
+                <div class="portfolio-item reveal reveal-delay-2" data-category="clip" data-lightbox="">
+                    <div class="img-placeholder" style="width:100%;height:100%;">CLIP<br>R&B</div>
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-cat">Clips Musicaux</span>
+                        <h3 class="portfolio-item-name">Mélodie Nocturne</h3>
+                    </div>
+                    <div class="portfolio-item-arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><h3>EDEE<span class="dot">.</span></h3><p>Studio photo & vidéo premium par Idrissa Sarr.</p></div>
+                <div class="footer-col"><h4>Navigation</h4><a href="index.html">Accueil</a><a href="about.html">À propos</a><a href="portfolio.html">Portfolio</a><a href="services.html">Services</a><a href="contact.html">Contact</a></div>
+                <div class="footer-col"><h4>Services</h4><a href="services.html">Photo Mode</a><a href="services.html">Vidéographie</a><a href="services.html">Clips</a><a href="services.html">Événementiel</a></div>
+                <div class="footer-col"><h4>Réseaux</h4><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a><a href="#" target="_blank" rel="noopener noreferrer">YouTube</a><a href="#" target="_blank" rel="noopener noreferrer">TikTok</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 EDEE Studio</p><div class="footer-bottom-links"><a href="#">Mentions légales</a><a href="#">Confidentialité</a></div></div>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox"><button class="lightbox-close" aria-label="Fermer">✕</button><img src="" alt="" id="lightboxImg"></div>
+    <button class="back-to-top" id="backToTop" aria-label="Haut">↑</button>
+    <script src="js/security.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

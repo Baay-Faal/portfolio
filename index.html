@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>EDEE — Idrissa Sarr | Photographe & Vidéaste</title>
+    <meta name="description" content="Idrissa Sarr, photographe et vidéaste professionnel basé à Dakar. Fashion, sport, nature, clips musicaux, événementiel. Studio EDEE.">
+    <meta name="author" content="Idrissa Sarr">
+    <meta property="og:title" content="EDEE — Idrissa Sarr | Photographe & Vidéaste">
+    <meta property="og:description" content="Portfolio premium — Vision artistique en photographie et vidéographie.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://edee-studio.com">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+        <div class="loader-logo">
+            <span>E</span><span>D</span><span>E</span><span>E</span>
+        </div>
+        <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+        <div class="loader-percent" id="loaderPercent">0%</div>
+    </div>
+
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="nav">
+        <a href="index.html" class="nav-logo">EDEE<span class="dot">.</span></a>
+        <ul class="nav-links">
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-bg-pattern"></div>
+            <div class="gradient-orb orb-1" style="position:absolute;"></div>
+            <div class="gradient-orb orb-2" style="position:absolute;"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Photographe & Vidéaste — Dakar
+            </div>
+            <h1 class="hero-title">
+                <span class="line"><span>IDRISSA</span></span>
+                <span class="line"><span><span class="stroke-text">SARR</span></span></span>
+            </h1>
+            <p class="hero-subtitle">
+                Capturer l'émotion. Sublimer l'instant. Chaque image raconte une histoire unique.
+            </p>
+            <div class="hero-buttons">
+                <a href="portfolio.html" class="btn-primary">
+                    Voir mes projets <span class="arrow">→</span>
+                </a>
+                <a href="about.html" class="btn-secondary">
+                    <span>▶</span> Découvrir
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-item">Fashion <span class="sep"></span></div>
+            <div class="marquee-item">Sport <span class="sep"></span></div>
+            <div class="marquee-item">Nature <span class="sep"></span></div>
+            <div class="marquee-item">Clips Musicaux <span class="sep"></span></div>
+            <div class="marquee-item">Événementiel <span class="sep"></span></div>
+            <div class="marquee-item">Studio <span class="sep"></span></div>
+            <div class="marquee-item">Mannequinat <span class="sep"></span></div>
+            <div class="marquee-item">Vidéographie <span class="sep"></span></div>
+            <div class="marquee-item">Fashion <span class="sep"></span></div>
+            <div class="marquee-item">Sport <span class="sep"></span></div>
+            <div class="marquee-item">Nature <span class="sep"></span></div>
+            <div class="marquee-item">Clips Musicaux <span class="sep"></span></div>
+            <div class="marquee-item">Événementiel <span class="sep"></span></div>
+            <div class="marquee-item">Studio <span class="sep"></span></div>
+            <div class="marquee-item">Mannequinat <span class="sep"></span></div>
+            <div class="marquee-item">Vidéographie <span class="sep"></span></div>
+        </div>
+    </div>
+
+    <!-- FEATURED PROJECTS PREVIEW -->
+    <section style="background:var(--gray-900);">
+        <div class="container">
+            <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem;flex-wrap:wrap;gap:2rem;">
+                <div>
+                    <div class="section-label reveal"><span class="line"></span> Sélection</div>
+                    <h2 class="section-title reveal reveal-delay-1">PROJETS<br><span class="accent">RÉCENTS</span></h2>
+                </div>
+                <a href="portfolio.html" class="btn-secondary reveal reveal-delay-2">
+                    Tout voir <span class="arrow">→</span>
+                </a>
+            </div>
+            <div class="portfolio-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="portfolio-item large reveal" data-category="fashion">
+                    <div class="img-placeholder" style="width:100%;height:100%;">FASHION<br>EDITORIAL</div>
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-cat">Fashion / Mannequinat</span>
+                        <h3 class="portfolio-item-name">Élégance Africaine</h3>
+                    </div>
+                    <div class="portfolio-item-arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-1" data-category="sport">
+                    <div class="img-placeholder" style="width:100%;height:100%;">SPORT<br>ACTION</div>
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-cat">Sport</span>
+                        <h3 class="portfolio-item-name">L'Intensité du Jeu</h3>
+                    </div>
+                    <div class="portfolio-item-arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-2" data-category="nature">
+                    <div class="img-placeholder" style="width:100%;height:100%;">NATURE<br>LANDSCAPE</div>
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-cat">Nature</span>
+                        <h3 class="portfolio-item-name">Coucher de Soleil Sahélien</h3>
+                    </div>
+                    <div class="portfolio-item-arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BIG CTA -->
+    <section class="big-cta" style="background:var(--black);">
+        <div class="big-cta-orb"></div>
+        <div class="container">
+            <h2 class="reveal">CRÉONS<br><span class="outline">ENSEMBLE</span></h2>
+            <p class="reveal reveal-delay-1">Vous avez un projet en tête ? Transformons votre vision en réalité visuelle.</p>
+            <div class="reveal reveal-delay-2">
+                <a href="contact.html" class="btn-primary">Démarrer un projet <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>EDEE<span class="dot">.</span></h3>
+                    <p>Studio de photographie et vidéographie premium fondé par Idrissa Sarr. Basé à Dakar, disponible partout.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <a href="about.html">À propos</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="services.html">Services</a>
+                    <a href="gallery.html">Galerie</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="services.html">Photo Mode</a>
+                    <a href="services.html">Vidéographie</a>
+                    <a href="services.html">Clips Musicaux</a>
+                    <a href="services.html">Événementiel</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Réseaux</h4>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">YouTube</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">TikTok</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EDEE Studio — Idrissa Sarr. Tous droits réservés.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Fermer">✕</button>
+        <img src="" alt="Aperçu" id="lightboxImg">
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</button>
+
+    <script src="js/security.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

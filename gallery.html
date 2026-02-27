@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <title>Galerie — Idrissa Sarr | EDEE Studio</title>
+    <meta name="description" content="Galerie immersive de photographies et vidéographies par Idrissa Sarr. Studio EDEE.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="loader" id="loader"><div class="loader-logo"><span>E</span><span>D</span><span>E</span><span>E</span></div><div class="loader-bar"><div class="loader-bar-fill"></div></div><div class="loader-percent" id="loaderPercent">0%</div></div>
+    <div class="cursor" id="cursor"></div>
+
+    <nav class="nav" id="nav">
+        <a href="index.html" class="nav-logo">EDEE<span class="dot">.</span></a>
+        <ul class="nav-links">
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html" class="active">Galerie</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">Accueil</a><a href="about.html">À propos</a><a href="portfolio.html">Portfolio</a><a href="services.html">Services</a><a href="gallery.html">Galerie</a><a href="contact.html">Contact</a></div>
+
+    <header class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="page-header-pattern"></div>
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="container">
+            <div class="page-header-label"><span class="line"></span> Galerie</div>
+            <h1>IMMERSION<br><span class="accent">VISUELLE</span></h1>
+            <p>Explorez mes créations visuelles dans une expérience immersive. Glissez pour naviguer horizontalement.</p>
+        </div>
+    </header>
+
+    <!-- HORIZONTAL GALLERY -->
+    <section style="background:var(--gray-900);overflow:hidden;">
+        <div class="container">
+            <div class="section-label reveal"><span class="line"></span> Fashion & Portraits</div>
+        </div>
+        <div class="gallery-scroll" id="galleryScroll" style="padding-left:clamp(1.5rem,4vw,4rem);">
+            <div class="gallery-card reveal">
+                <div class="img-placeholder" style="width:100%;height:100%;">PORTRAIT 01</div>
+                <div class="gallery-card-overlay"><div><div class="gallery-card-title">Lumière Naturelle</div><div class="gallery-card-sub">Fashion</div></div></div>
+            </div>
+            <div class="gallery-card reveal reveal-delay-1">
+                <div class="img-placeholder" style="width:100%;height:100%;">PORTRAIT 02</div>
+                <div class="gallery-card-overlay"><div><div class="gallery-card-title">Clair-Obscur</div><div class="gallery-card-sub">Studio</div></div></div>
+            </div>
+            <div class="gallery-card reveal reveal-delay-2">
+                <div class="img-placeholder" style="width:100%;height:100%;">PORTRAIT 03</div>
+                <div class="gallery-card-overlay"><div><div class="gallery-card-title">Regard Intense</div><div class="gallery-card-sub">Portrait</div></div></div>
+            </div>
+            <div class="gallery-card reveal reveal-delay-3">
+                <div class="img-placeholder" style="width:100%;height:100%;">FASHION 01</div>
+                <div class="gallery-card-overlay"><div><div class="gallery-card-title">Haute Couture</div><div class="gallery-card-sub">Fashion</div></div></div>
+            </div>
+            <div class="gallery-card reveal">
+                <div class="img-placeholder" style="width:100%;height:100%;">FASHION 02</div>
+                <div class="gallery-card-overlay"><div><div class="gallery-card-title">Street Style</div><div class="gallery-card-sub">Urban</div></div></div>
+            </div>
+            <div style="width:2rem;flex-shrink:0;"></div>
+        </div>
+    </section>
+
+    <!-- SECOND ROW -->
+    <section style="background:var(--black);overflow:hidden;">
+        <div class="container">
+            <div class="section-label reveal"><span class="line"></span> Sport & Action</div>
+        </div>
+        <div class="gallery-scroll" style="padding-left:clamp(1.5rem,4vw,4rem);">
+            <div class="gallery-card reveal">
+                <div class="img-placeholder" style="width:100%;height:100%;">SPORT 01</div>
+                <div class="gallery-card-overlay"><div><div class="gallery-card-title">L'Athlète</div><div class="gallery-card-sub">Football</div></div></div>
+            </div>
+            <div class="gallery-card reveal reveal-delay-1">
+                <div class="img-placeholder" style="width:100%;height:100%;">SPORT 02</div>
+                <div class="gallery-card-overlay"><div><div class="gallery-card-title">Vitesse</div><div class="gallery-card-sub">Athlétisme</div></div></div>
+            </div>
+            <div class="gallery-card reveal reveal-delay-2">
+                <div class="img-placeholder" style="width:100%;height:100%;">SPORT 03</div>
+                <div class="gallery-card-overlay"><div><div class="gallery-card-title">Victoire</div><div class="gallery-card-sub">Compétition</div></div></div>
+            </div>
+            <div class="gallery-card reveal reveal-delay-3">
+                <div class="img-placeholder" style="width:100%;height:100%;">NATURE 01</div>
+                <div class="gallery-card-overlay"><div><div class="gallery-card-title">Horizon Doré</div><div class="gallery-card-sub">Paysage</div></div></div>
+            </div>
+            <div class="gallery-card reveal">
+                <div class="img-placeholder" style="width:100%;height:100%;">NATURE 02</div>
+                <div class="gallery-card-overlay"><div><div class="gallery-card-title">Forêt Tropicale</div><div class="gallery-card-sub">Nature</div></div></div>
+            </div>
+            <div style="width:2rem;flex-shrink:0;"></div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section style="background:var(--gray-900);">
+        <div class="container">
+            <div class="section-label reveal"><span class="line"></span> Témoignages</div>
+            <h2 class="section-title reveal reveal-delay-1">CE QU'ILS<br><span class="accent">DISENT</span></h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">Idrissa a su capturer l'essence de notre marque avec une précision et une créativité exceptionnelles. Les photos ont dépassé toutes nos attentes.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AF</div>
+                        <div><div class="testimonial-name">Aminata Fall</div><div class="testimonial-role">Directrice Artistique — Maison Sénégalaise</div></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">Le clip qu'il a réalisé pour mon dernier single a été un véritable game-changer. Sa vision artistique et sa maîtrise technique sont impressionnantes.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MD</div>
+                        <div><div class="testimonial-name">Moussa Diop</div><div class="testimonial-role">Artiste Musical</div></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">Pour notre événement corporate, Idrissa a été irréprochable. Discret, professionnel et les photos étaient d'une qualité magazine. Un talent rare.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">FN</div>
+                        <div><div class="testimonial-name">Fatou Ndiaye</div><div class="testimonial-role">CEO — EventPro Dakar</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><h3>EDEE<span class="dot">.</span></h3><p>Studio photo & vidéo premium.</p></div>
+                <div class="footer-col"><h4>Navigation</h4><a href="index.html">Accueil</a><a href="about.html">À propos</a><a href="portfolio.html">Portfolio</a><a href="services.html">Services</a><a href="contact.html">Contact</a></div>
+                <div class="footer-col"><h4>Services</h4><a href="services.html">Photo Mode</a><a href="services.html">Vidéographie</a><a href="services.html">Clips</a><a href="services.html">Événementiel</a></div>
+                <div class="footer-col"><h4>Réseaux</h4><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a><a href="#" target="_blank" rel="noopener noreferrer">YouTube</a><a href="#" target="_blank" rel="noopener noreferrer">TikTok</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 EDEE Studio</p><div class="footer-bottom-links"><a href="#">Mentions légales</a><a href="#">Confidentialité</a></div></div>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox"><button class="lightbox-close" aria-label="Fermer">✕</button><img src="" alt="" id="lightboxImg"></div>
+    <button class="back-to-top" id="backToTop" aria-label="Haut">↑</button>
+    <script src="js/security.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <title>Contact — Idrissa Sarr | EDEE Studio</title>
+    <meta name="description"
+        content="Contactez Idrissa Sarr pour vos projets de photographie et vidéographie. Devis gratuit. Studio EDEE, Dakar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #0a0a0a;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e5e5e5;
+            --gray-300: #d4d4d4;
+            --gray-400: #a3a3a3;
+            --gray-500: #737373;
+            --gray-600: #525252;
+            --gray-700: #404040;
+            --gray-800: #262626;
+            --gray-900: #171717;
+            --accent: #c8ff00;
+            --accent-dark: #a3cc00;
+            --accent-rgb: 200, 255, 0;
+            --danger: #ef4444;
+            --success: #22c55e;
+            --whatsapp: #25D366;
+            --whatsapp-dark: #128C7E;
+            --instagram: #E4405F;
+            --youtube: #FF0000;
+            --tiktok: #000000;
+            --linkedin: #0A66C2;
+            --facebook: #1877F2;
+            --snapchat: #FFFC00;
+            --twitter: #000000;
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --transition: cubic-bezier(0.16, 1, 0.3, 1);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 20px;
+            --radius-full: 50px;
+            --nav-height: 80px;
+            --container-max: 1400px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background: var(--black);
+            color: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font-family: var(--font-main);
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: var(--black);
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--black);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gray-700);
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+
+        /* LOADER */
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: var(--black);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: opacity 0.8s var(--transition), visibility 0.8s;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .loader-logo {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            letter-spacing: -0.04em;
+        }
+
+        .loader-logo span {
+            display: inline-block;
+            animation: loaderChar 0.6s var(--transition) forwards;
+            opacity: 0;
+            transform: translateY(100%);
+        }
+
+        .loader-logo span:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .loader-logo span:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .loader-logo span:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        @keyframes loaderChar {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .loader-bar {
+            width: 200px;
+            height: 2px;
+            background: var(--gray-800);
+            margin-top: 2rem;
+            border-radius: 1px;
+            overflow: hidden;
+        }
+
+        .loader-bar-fill {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 1px;
+            animation: loaderFill 1.8s var(--transition) forwards;
+        }
+
+        @keyframes loaderFill {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        .loader-percent {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--gray-400);
+            letter-spacing: 0.1em;
+        }
+
+        /* CURSOR */
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 99998;
+            transition: transform 0.15s var(--transition), opacity 0.3s;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: difference;
+        }
+
+        .cursor.hover {
+            transform: translate(-50%, -50%) scale(2.5);
+            background: var(--accent);
+            opacity: 0.3;
+        }
+
+        @media (max-width: 768px) {
+            .cursor {
+                display: none;
+            }
+        }
+
+        /* NAV */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            padding: 0 clamp(1.5rem, 4vw, 3rem);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            transition: all 0.5s var(--transition);
+        }
+
+        .nav.scrolled {
+            height: 64px;
+            backdrop-filter: blur(24px) saturate(180%);
+            background: rgba(10, 10, 10, 0.88);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            z-index: 1001;
+        }
+
+        .nav-logo .dot {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gray-400);
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            position: relative;
+            padding: 0.25rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.4s var(--transition);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--white);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--white) !important;
+            color: var(--black) !important;
+            padding: 0.65rem 1.5rem !important;
+            border-radius: var(--radius-full) !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.06em !important;
+            transition: all 0.3s var(--transition) !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--accent) !important;
+            transform: scale(1.05);
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 8px;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 2px;
+            background: var(--white);
+            transition: all 0.4s var(--transition);
+            transform-origin: center;
+            display: block;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            background: var(--black);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s var(--transition);
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu a {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 0.5s var(--transition);
+        }
+
+        .mobile-menu.active a {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .mobile-menu.active a:nth-child(1) {
+            transition-delay: 0.05s;
+        }
+
+        .mobile-menu.active a:nth-child(2) {
+            transition-delay: 0.1s;
+        }
+
+        .mobile-menu.active a:nth-child(3) {
+            transition-delay: 0.15s;
+        }
+
+        .mobile-menu.active a:nth-child(4) {
+            transition-delay: 0.2s;
+        }
+
+        .mobile-menu.active a:nth-child(5) {
+            transition-delay: 0.25s;
+        }
+
+        .mobile-menu.active a:nth-child(6) {
+            transition-delay: 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--accent);
+        }
+
+        /* LAYOUT */
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 clamp(1.5rem, 4vw, 4rem);
+        }
+
+        section {
+            padding: clamp(5rem, 12vw, 9rem) 0;
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            padding-top: calc(var(--nav-height) + 4rem);
+            padding-bottom: 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0a 50%, #16213e 100%);
+        }
+
+        .page-header-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.03;
+            background-image: radial-gradient(circle at 25% 25%, var(--white) 1px, transparent 1px),
+                radial-gradient(circle at 75% 75%, var(--white) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .page-header .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-header-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .page-header-label .line {
+            width: 40px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .page-header h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            line-height: 0.95;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .page-header h1 .accent {
+            color: var(--accent);
+        }
+
+        .page-header p {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: var(--gray-400);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .gradient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+            animation: orbFloat 8s ease-in-out infinite;
+        }
+
+        .gradient-orb.orb-1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(var(--accent-rgb), 0.08), transparent);
+            top: -200px;
+            right: -150px;
+        }
+
+        .gradient-orb.orb-2 {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(var(--accent-rgb), 0.05), transparent);
+            bottom: -100px;
+            left: -100px;
+            animation-delay: -4s;
+        }
+
+        @keyframes orbFloat {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(30px, -30px) scale(1.1);
+            }
+        }
+
+        /* SECTION COMMONS */
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-label .line {
+            width: 40px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .section-title .accent {
+            color: var(--accent);
+        }
+
+        .section-desc {
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            color: var(--gray-400);
+            line-height: 1.7;
+            max-width: 600px;
+        }
+
+        /* REVEAL */
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 0.9s var(--transition);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .reveal-delay-4 {
+            transition-delay: 0.4s;
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: all 0.9s var(--transition);
+        }
+
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* CONTACT */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(3rem, 6vw, 6rem);
+        }
+
+        /* CONTACT METHODS */
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--gray-800);
+            transition: all 0.3s var(--transition);
+        }
+
+        .contact-method:hover {
+            padding-left: 0.5rem;
+        }
+
+        .contact-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.4s var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-icon svg {
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s var(--transition);
+        }
+
+        .contact-method:hover .contact-icon svg {
+            transform: scale(1.15);
+        }
+
+        /* Email icon */
+        .contact-icon.email-icon {
+            background: var(--gray-800);
+            color: var(--white);
+        }
+
+        .contact-method:hover .contact-icon.email-icon {
+            background: var(--accent);
+            color: var(--black);
+            box-shadow: 0 8px 25px rgba(var(--accent-rgb), 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* WhatsApp icon */
+        .contact-icon.whatsapp-icon {
+            background: var(--whatsapp);
+            color: var(--white);
+        }
+
+        .contact-method:hover .contact-icon.whatsapp-icon {
+            background: var(--whatsapp-dark);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+            transform: translateY(-2px);
+        }
+
+        /* Location icon */
+        .contact-icon.location-icon {
+            background: linear-gradient(135deg, #FF6B6B, #EE5A24);
+            color: var(--white);
+        }
+
+        .contact-method:hover .contact-icon.location-icon {
+            box-shadow: 0 8px 25px rgba(238, 90, 36, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Clock icon */
+        .contact-icon.clock-icon {
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: var(--black);
+        }
+
+        .contact-method:hover .contact-icon.clock-icon {
+            box-shadow: 0 8px 25px rgba(var(--accent-rgb), 0.3);
+            transform: translateY(-2px);
+        }
+
+        .contact-method h4 {
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-method p,
+        .contact-method a {
+            font-size: 0.85rem;
+            color: var(--gray-400);
+            transition: color 0.3s;
+        }
+
+        .contact-method a:hover {
+            color: var(--accent);
+        }
+
+        /* SOCIAL LINKS */
+        .contact-social {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid var(--gray-700);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s var(--transition);
+            position: relative;
+            overflow: hidden;
+            color: var(--gray-400);
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.4s var(--transition);
+        }
+
+        .social-link svg {
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s var(--transition);
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.08);
+            border-color: transparent;
+        }
+
+        .social-link:hover svg {
+            transform: scale(1.1);
+        }
+
+        /* Instagram */
+        .social-link.social-instagram::before {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+
+        .social-link.social-instagram:hover::before {
+            opacity: 1;
+        }
+
+        .social-link.social-instagram:hover {
+            color: var(--white);
+            box-shadow: 0 8px 25px rgba(228, 64, 95, 0.4);
+        }
+
+        /* WhatsApp */
+        .social-link.social-whatsapp::before {
+            background: var(--whatsapp);
+        }
+
+        .social-link.social-whatsapp:hover::before {
+            opacity: 1;
+        }
+
+        .social-link.social-whatsapp:hover {
+            color: var(--white);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* YouTube */
+        .social-link.social-youtube::before {
+            background: var(--youtube);
+        }
+
+        .social-link.social-youtube:hover::before {
+            opacity: 1;
+        }
+
+        .social-link.social-youtube:hover {
+            color: var(--white);
+            box-shadow: 0 8px 25px rgba(255, 0, 0, 0.35);
+        }
+
+        /* TikTok */
+        .social-link.social-tiktok::before {
+            background: linear-gradient(135deg, #25F4EE, #FE2C55, #000000);
+        }
+
+        .social-link.social-tiktok:hover::before {
+            opacity: 1;
+        }
+
+        .social-link.social-tiktok:hover {
+            color: var(--white);
+            box-shadow: 0 8px 25px rgba(254, 44, 85, 0.35);
+        }
+
+        /* LinkedIn */
+        .social-link.social-linkedin::before {
+            background: var(--linkedin);
+        }
+
+        .social-link.social-linkedin:hover::before {
+            opacity: 1;
+        }
+
+        .social-link.social-linkedin:hover {
+            color: var(--white);
+            box-shadow: 0 8px 25px rgba(10, 102, 194, 0.4);
+        }
+
+        /* Facebook */
+        .social-link.social-facebook::before {
+            background: var(--facebook);
+        }
+
+        .social-link.social-facebook:hover::before {
+            opacity: 1;
+        }
+
+        .social-link.social-facebook:hover {
+            color: var(--white);
+            box-shadow: 0 8px 25px rgba(24, 119, 242, 0.4);
+        }
+
+        /* Snapchat */
+        .social-link.social-snapchat::before {
+            background: var(--snapchat);
+        }
+
+        .social-link.social-snapchat:hover::before {
+            opacity: 1;
+        }
+
+        .social-link.social-snapchat:hover {
+            color: var(--black);
+            box-shadow: 0 8px 25px rgba(255, 252, 0, 0.35);
+        }
+
+        /* X / Twitter */
+        .social-link.social-x::before {
+            background: var(--white);
+        }
+
+        .social-link.social-x:hover::before {
+            opacity: 1;
+        }
+
+        .social-link.social-x:hover {
+            color: var(--black);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        /* FORM */
+        .contact-form-card {
+            background: var(--black);
+            border: 1px solid var(--gray-800);
+            border-radius: var(--radius-xl);
+            padding: clamp(2rem, 4vw, 3rem);
+        }
+
+        .contact-form-card h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form-card>p {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gray-400);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.9rem 1.15rem;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-800);
+            border-radius: var(--radius-md);
+            color: var(--white);
+            font-size: 0.9rem;
+            font-family: var(--font-main);
+            transition: all 0.3s;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.1);
+        }
+
+        .form-group input.error,
+        .form-group textarea.error,
+        .form-group select.error {
+            border-color: var(--danger);
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+        }
+
+        .form-error {
+            font-size: 0.75rem;
+            color: var(--danger);
+            margin-top: 0.4rem;
+            display: none;
+        }
+
+        .form-error.visible {
+            display: block;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group select {
+            cursor: pointer;
+            -webkit-appearance: none;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1.1rem;
+            background: var(--accent);
+            color: var(--black);
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.3s var(--transition);
+            font-family: var(--font-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .form-submit:hover {
+            background: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(var(--accent-rgb), 0.2);
+        }
+
+        .form-submit:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .hp-field {
+            display: none !important;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--black);
+            border-top: 1px solid var(--gray-800);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand h3 .dot {
+            color: var(--accent);
+        }
+
+        .footer-brand p {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gray-400);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col a {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            margin-bottom: 0.85rem;
+            transition: all 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent);
+            transform: translateX(4px);
+        }
+
+        .footer-col a svg {
+            flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+
+        .footer-col a:hover svg {
+            transform: scale(1.15);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-800);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: var(--gray-600);
+            font-size: 0.8rem;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-bottom-links a {
+            color: var(--gray-600);
+            font-size: 0.8rem;
+            transition: color 0.3s;
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--accent);
+        }
+
+        /* LIGHTBOX */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.96);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s var(--transition);
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid var(--gray-700);
+            background: transparent;
+            color: var(--white);
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .lightbox-close:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: var(--radius-sm);
+        }
+
+        /* BACK TO TOP */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            z-index: 100;
+            border: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.4s var(--transition);
+            box-shadow: 0 4px 20px rgba(var(--accent-rgb), 0.3);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-4px);
+        }
+
+        /* FLOATING WHATSAPP */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 5.5rem;
+            right: 2rem;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: var(--whatsapp);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0.4);
+            transition: all 0.4s var(--transition);
+            animation: whatsappPulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.12) translateY(-3px);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.55);
+            animation: none;
+        }
+
+        .whatsapp-float .wa-tooltip {
+            position: absolute;
+            right: calc(100% + 14px);
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 0.6rem 1.1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s var(--transition);
+            pointer-events: none;
+            border: 1px solid var(--gray-700);
+        }
+
+        .whatsapp-float .wa-tooltip::after {
+            content: '';
+            position: absolute;
+            right: -6px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-left: 6px solid var(--gray-900);
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+        }
+
+        .whatsapp-float:hover .wa-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @keyframes whatsappPulse {
+            0% {
+                box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45), 0 0 0 16px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* TOAST */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            padding: 1rem 2rem;
+            background: var(--gray-900);
+            border: 1px solid var(--gray-700);
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            font-weight: 600;
+            z-index: 10001;
+            opacity: 0;
+            transition: all 0.5s var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .toast.success {
+            border-color: var(--success);
+        }
+
+        .toast.error {
+            border-color: var(--danger);
+        }
+
+        .toast.visible {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .whatsapp-float {
+                bottom: 5rem;
+                right: 1.25rem;
+                width: 52px;
+                height: 52px;
+            }
+
+            .whatsapp-float .wa-tooltip {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-social {
+                gap: 0.6rem;
+            }
+
+            .social-link {
+                width: 44px;
+                height: 44px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+        <div class="loader-logo"><span>E</span><span>D</span><span>E</span><span>E</span></div>
+        <div class="loader-bar">
+            <div class="loader-bar-fill"></div>
+        </div>
+        <div class="loader-percent" id="loaderPercent">0%</div>
+    </div>
+
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <a href="index.html" class="nav-logo">EDEE<span class="dot">.</span></a>
+        <ul class="nav-links">
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="contact.html" class="nav-cta active">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="page-header-pattern"></div>
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="container">
+            <div class="page-header-label"><span class="line"></span> Contact</div>
+            <h1>PARLONS DE<br><span class="accent">VOTRE PROJET</span></h1>
+            <p>Disponible pour des collaborations créatives, des projets commerciaux et des partenariats. Réponse
+                garantie sous 24h.</p>
+        </div>
+    </header>
+
+    <!-- CONTACT SECTION -->
+    <section style="background: var(--gray-900);">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- LEFT: INFO -->
+                <div>
+                    <div class="section-label reveal"><span class="line"></span> Coordonnées</div>
+                    <h2 class="section-title reveal reveal-delay-1" style="font-size:clamp(2rem,4vw,3rem);">
+                        RESTONS<br><span class="accent">CONNECTÉS</span>
+                    </h2>
+                    <p class="section-desc reveal reveal-delay-2" style="margin-bottom:2.5rem;">
+                        Chaque demande reçoit une réponse personnalisée. N'hésitez pas à me contacter par le canal qui
+                        vous convient.
+                    </p>
+
+                    <!-- EMAIL -->
+                    <div class="contact-method reveal reveal-delay-2">
+                        <div class="contact-icon email-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="M22 4L12 13L2 4" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:edeesarr738@gmail.com">edeesarr738@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <!-- WHATSAPP -->
+                    <div class="contact-method reveal reveal-delay-3">
+                        <div class="contact-icon whatsapp-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/221785227274" target="_blank" rel="noopener noreferrer">+221 78 522
+                                72 74</a>
+                        </div>
+                    </div>
+
+                    <!-- LOCATION -->
+                    <div class="contact-method reveal reveal-delay-3">
+                        <div class="contact-icon location-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Localisation</h4>
+                            <p>Sicap Liberté III, Dakar, Sénégal</p>
+                        </div>
+                    </div>
+
+                    <!-- DISPONIBILITÉ -->
+                    <div class="contact-method reveal reveal-delay-4">
+                        <div class="contact-icon clock-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Disponibilité</h4>
+                            <p>Lun — Sam : 9h00 — 19h00 (GMT)</p>
+                        </div>
+                    </div>
+
+                    <!-- SOCIAL LINKS -->
+                    <div class="contact-social reveal reveal-delay-4">
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/edee_studio" class="social-link social-instagram"
+                            aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/221785227274" class="social-link social-whatsapp" aria-label="WhatsApp"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                        </a>
+
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@edee_studio" class="social-link social-youtube"
+                            aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@edee_studio" class="social-link social-tiktok"
+                            aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                            </svg>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/idrissa-sarr" class="social-link social-linkedin"
+                            aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/edee.studio" class="social-link social-facebook"
+                            aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+
+                        <!-- Snapchat -->
+                        <a href="https://www.snapchat.com/add/edee_studio" class="social-link social-snapchat"
+                            aria-label="Snapchat" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path
+                                    d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12.922-.214.04-.012.06-.012.08-.012.16 0 .3.044.404.12.089.06.179.18.209.3.04.18-.04.36-.12.42-.12.09-.36.21-.6.3-.12.06-.24.12-.36.15-.22.07-.39.1-.5.14l-.06.03c-.1.06-.18.18-.21.28-.03.18.04.36.15.48l.03.06c.12.15.54.75.96 1.23.6.66 1.29 1.17 1.59 1.38.18.12.33.27.39.42.06.18 0 .42-.12.54-.18.12-.39.21-.63.27-.3.06-.63.12-.87.12-.06 0-.12 0-.18-.03-.12-.03-.21-.06-.36-.06-.18 0-.42.06-.66.18-.36.18-.75.42-1.2.42-.06 0-.12 0-.18-.03-.3-.06-.57-.18-.78-.33-.36-.24-.66-.54-.96-.87-.48-.51-1.02-.78-1.68-.78-.66 0-1.2.27-1.68.78-.3.33-.6.63-.96.87-.21.15-.48.27-.78.33-.06.03-.12.03-.18.03-.45 0-.84-.24-1.2-.42-.24-.12-.48-.18-.66-.18-.15 0-.24.03-.36.06-.06.03-.12.03-.18.03-.24 0-.57-.06-.87-.12-.24-.06-.45-.15-.63-.27-.15-.12-.18-.36-.12-.54.06-.15.21-.3.39-.42.3-.21.99-.72 1.59-1.38.42-.48.84-1.08.96-1.23l.03-.06c.11-.12.18-.3.15-.48-.03-.1-.12-.22-.21-.28l-.06-.03c-.11-.04-.28-.07-.5-.14-.12-.03-.24-.09-.36-.15-.24-.09-.48-.21-.6-.3-.08-.06-.16-.24-.12-.42.03-.12.12-.24.21-.3.1-.08.24-.12.4-.12.02 0 .04 0 .08.01.26.09.62.2.92.21.2 0 .33-.04.4-.09-.01-.17-.02-.33-.03-.51l-.003-.06c-.104-1.628-.23-3.654.299-4.847C7.86 1.069 11.216.793 12.206.793z" />
+                            </svg>
+                        </a>
+
+                        <!-- X (Twitter) -->
+                        <a href="https://x.com/edee_studio" class="social-link social-x" aria-label="X" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT: FORM -->
+                <div class="contact-form-card reveal-right">
+                    <h3>Envoyez un message</h3>
+                    <p>Tous les champs marqués * sont obligatoires.</p>
+                    <form id="contactForm" novalidate>
+                        <input type="hidden" name="_csrf" id="csrfToken">
+                        <div class="hp-field" aria-hidden="true">
+                            <label for="website_url">Website</label>
+                            <input type="text" name="website_url" id="website_url" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nom complet *</label>
+                                <input type="text" id="name" name="name" placeholder="Votre nom complet" required
+                                    maxlength="100" autocomplete="name">
+                                <div class="form-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" placeholder="votre@email.com" required
+                                    maxlength="254" autocomplete="email">
+                                <div class="form-error"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+221 7X XXX XX XX" maxlength="20"
+                                    autocomplete="tel">
+                                <div class="form-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Type de prestation *</label>
+                                <select id="service" name="service" required>
+                                    <option value="" disabled selected>Sélectionnez...</option>
+                                    <option value="photo-mode">Photographie Mode</option>
+                                    <option value="videographie">Vidéographie</option>
+                                    <option value="shooting-marque">Shooting Marque</option>
+                                    <option value="evenementiel">Événementiel</option>
+                                    <option value="clip">Production de Clip</option>
+                                    <option value="sport">Photographie Sportive</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                                <div class="form-error"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget estimé</label>
+                            <select id="budget" name="budget">
+                                <option value="" disabled selected>Fourchette de budget</option>
+                                <option value="small">Moins de 200 000 FCFA</option>
+                                <option value="medium">200 000 — 500 000 FCFA</option>
+                                <option value="large">500 000 — 1 000 000 FCFA</option>
+                                <option value="premium">Plus de 1 000 000 FCFA</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Votre message *</label>
+                            <textarea id="message" name="message"
+                                placeholder="Décrivez votre projet, vos attentes, le contexte, les dates souhaitées..."
+                                rows="5" required maxlength="2000"></textarea>
+                            <div class="form-error"></div>
+                        </div>
+                        <button type="submit" class="form-submit">
+                            Envoyer le message <span>→</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>EDEE<span class="dot">.</span></h3>
+                    <p>Studio de photographie et vidéographie premium par Idrissa Sarr. Basé à Dakar.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <a href="index.html">Accueil</a>
+                    <a href="about.html">À propos</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="services.html">Services</a>
+                    <a href="gallery.html">Galerie</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="services.html">Photo Mode</a>
+                    <a href="services.html">Vidéographie</a>
+                    <a href="services.html">Clips Musicaux</a>
+                    <a href="services.html">Événementiel</a>
+                    <a href="services.html">Sport</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Réseaux</h4>
+                    <a href="https://www.instagram.com/edee_studio" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                        Instagram
+                    </a>
+                    <a href="https://wa.me/221785227274" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a href="https://www.youtube.com/@edee_studio" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                        YouTube
+                    </a>
+                    <a href="https://www.tiktok.com/@edee_studio" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                            <path
+                                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                        </svg>
+                        TikTok
+                    </a>
+                    <a href="https://www.linkedin.com/in/idrissa-sarr" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EDEE Studio — Idrissa Sarr. Tous droits réservés.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Fermer">✕</button>
+        <img src="" alt="" id="lightboxImg">
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" aria-label="Haut">↑</button>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/221785227274?text=Bonjour%20Idrissa%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20services.%20Pouvons-nous%20en%20discuter%20%3F"
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contacter via WhatsApp">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        <span class="wa-tooltip">💬 Discutons sur WhatsApp</span>
+    </a>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // ==================== LOADER ====================
+        const loader = document.getElementById('loader');
+        const loaderPercent = document.getElementById('loaderPercent');
+        let percent = 0;
+        const loaderInterval = setInterval(() => {
+            percent += Math.floor(Math.random() * 8) + 3;
+            if (percent >= 100) {
+                percent = 100;
+                clearInterval(loaderInterval);
+                setTimeout(() => { loader.classList.add('hidden'); }, 400);
+            }
+            loaderPercent.textContent = percent + '%';
+        }, 70);
+
+        // ==================== CURSOR ====================
+        const cursor = document.getElementById('cursor');
+        if (window.innerWidth > 768) {
+            let mouseX = 0, mouseY = 0, cursorX = 0, cursorY = 0;
+            document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+            (function animCursor() {
+                cursorX += (mouseX - cursorX) * 0.12;
+                cursorY += (mouseY - cursorY) * 0.12;
+                cursor.style.left = cursorX + 'px';
+                cursor.style.top = cursorY + 'px';
+                requestAnimationFrame(animCursor);
+            })();
+            document.querySelectorAll('a, button, .social-link, input, textarea, select').forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+            });
+        }
+
+        // ==================== NAV ====================
+        const nav = document.getElementById('nav');
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+            backToTop.classList.toggle('visible', window.scrollY > 600);
+        }, { passive: true });
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+        mobileMenu.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // ==================== REVEAL ====================
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.reveal, .reveal-right').forEach(el => revealObserver.observe(el));
+
+        // ==================== FORM ====================
+        const sanitize = str => {
+            if (typeof str !== 'string') return '';
+            const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+            return str.replace(/[&<>"']/g, s => map[s]);
+        };
+
+        const validators = {
+            name: v => {
+                const c = v.trim();
+                if (c.length < 2) return { valid: false, msg: 'Minimum 2 caractères.' };
+                if (!/^[a-zA-ZÀ-ÿ\s\'-]+$/.test(c)) return { valid: false, msg: 'Caractères non autorisés.' };
+                return { valid: true, value: sanitize(c) };
+            },
+            email: v => {
+                const c = v.trim().toLowerCase();
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c)) return { valid: false, msg: 'Email invalide.' };
+                return { valid: true, value: c };
+            },
+            phone: v => {
+                const c = v.trim().replace(/\s+/g, '');
+                if (c === '') return { valid: true, value: '' };
+                if (!/^\+?[0-9]{8,15}$/.test(c)) return { valid: false, msg: 'Numéro invalide.' };
+                return { valid: true, value: c };
+            },
+            message: v => {
+                const c = v.trim();
+                if (c.length < 10) return { valid: false, msg: 'Minimum 10 caractères.' };
+                return { valid: true, value: sanitize(c) };
+            },
+            select: v => {
+                if (!v || v === '') return { valid: false, msg: 'Veuillez sélectionner.' };
+                return { valid: true, value: v };
+            }
+        };
+
+        const form = document.getElementById('contactForm');
+        if (form) {
+            const validateField = field => {
+                const errorEl = field.parentElement.querySelector('.form-error');
+                let result;
+                switch (field.name) {
+                    case 'name': result = validators.name(field.value); break;
+                    case 'email': result = validators.email(field.value); break;
+                    case 'phone': result = validators.phone(field.value); break;
+                    case 'message': result = validators.message(field.value); break;
+                    case 'service': result = validators.select(field.value); break;
+                    default: result = { valid: true };
+                }
+                if (!result.valid) {
+                    field.classList.add('error');
+                    if (errorEl) { errorEl.textContent = result.msg; errorEl.classList.add('visible'); }
+                } else {
+                    field.classList.remove('error');
+                    if (errorEl) { errorEl.textContent = ''; errorEl.classList.remove('visible'); }
+                }
+                return result;
+            };
+
+            form.querySelectorAll('input, textarea, select').forEach(f => {
+                f.addEventListener('blur', () => validateField(f));
+                f.addEventListener('input', () => { if (f.classList.contains('error')) validateField(f); });
+            });
+
+            let submissions = [];
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+
+                // Honeypot
+                const hp = form.querySelector('[name="website_url"]');
+                if (hp && hp.value !== '') return;
+
+                // Rate limit
+                const now = Date.now();
+                submissions = submissions.filter(t => now - t < 300000);
+                if (submissions.length >= 3) {
+                    showToast('Trop de tentatives. Réessayez dans quelques minutes.', 'error');
+                    return;
+                }
+
+                // Validate
+                let allValid = true;
+                form.querySelectorAll('input:not([type="hidden"]):not(.hp-field input), textarea, select').forEach(f => {
+                    if (f.name && f.name !== 'website_url') {
+                        const r = validateField(f);
+                        if (!r.valid && f.hasAttribute('required')) allValid = false;
+                    }
+                });
+
+                if (!allValid) {
+                    showToast('Veuillez corriger les erreurs.', 'error');
+                    return;
+                }
+
+                // Submit
+                const btn = form.querySelector('.form-submit');
+                const original = btn.innerHTML;
+                btn.disabled = true;
+                btn.innerHTML = '⏳ Envoi en cours...';
+
+                setTimeout(() => {
+                    submissions.push(Date.now());
+                    btn.innerHTML = '✓ Message envoyé !';
+                    btn.style.background = 'var(--success)';
+                    btn.style.color = 'var(--white)';
+                    showToast('Message envoyé avec succès ! Réponse sous 24h.', 'success');
+                    form.reset();
+
+                    setTimeout(() => {
+                        btn.disabled = false;
+                        btn.innerHTML = original;
+                        btn.style.background = '';
+                        btn.style.color = '';
+                    }, 3000);
+                }, 1500);
+            });
+        }
+
+        function showToast(message, type) {
+            const toast = document.getElementById('toast');
+            const icon = type === 'success' ? '✓' : '⚠';
+            toast.className = `toast ${type}`;
+            toast.innerHTML = `<span>${icon}</span> ${sanitize(message)}`;
+            requestAnimationFrame(() => toast.classList.add('visible'));
+            setTimeout(() => toast.classList.remove('visible'), 4000);
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const t = document.querySelector(a.getAttribute('href'));
+                if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Protect images
+        document.addEventListener('contextmenu', e => {
+            if (e.target.tagName === 'IMG') e.preventDefault();
+        });
+    </script>
+</body>
+
+</html>
